@@ -1,0 +1,6 @@
+{
+  "appId": "com.lordshadow.calculator",
+  "appName": "Calculator",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

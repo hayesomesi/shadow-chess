@@ -1,0 +1,30 @@
+:root {
+  color-scheme: dark;
+  --bg: #10131c;
+  --panel: #191e2b;
+  --key: #252c3b;
+  --text: #f5f7fb;
+  --muted: #8993a7;
+  --accent: #8b7cff;
+  --accent2: #6e5cf5;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, sans-serif; }
+body { min-height: 100svh; display: grid; place-items: center; padding: 18px; }
+.app { width: min(100%, 430px); }
+.topbar { display:flex; align-items:center; justify-content:space-between; margin: 4px 4px 20px; color: var(--muted); font-size: 12px; letter-spacing: 2px; font-weight: 800; }
+.brand { display:flex; align-items:center; gap:10px; color:#e8eaff; }
+.brand-icon { display:grid; place-items:center; width:30px; height:30px; border-radius:10px; background:var(--accent); color:white; font-size:20px; }
+.status { color:#8be0b2; letter-spacing:1px; }
+.calculator { background:var(--panel); border:1px solid #293144; border-radius:28px; padding:20px; box-shadow:0 24px 70px #0006; }
+.display { min-height:164px; display:flex; flex-direction:column; justify-content:flex-end; align-items:flex-end; padding:14px 8px 24px; overflow:hidden; }
+.history { width:100%; min-height:24px; text-align:right; color:var(--muted); font-size:17px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.screen { width:100%; text-align:right; font-size:clamp(42px, 12vw, 64px); font-weight:650; letter-spacing:-2px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.keypad { display:grid; grid-template-columns:repeat(4, 1fr); gap:11px; }
+.key { border:0; min-width:0; height:clamp(62px, 16vw, 76px); border-radius:20px; background:var(--key); color:var(--text); font-size:25px; font-weight:550; cursor:pointer; box-shadow:inset 0 1px 0 #ffffff0a; transition:transform .08s, filter .08s; }
+.key:active { transform:scale(.95); filter:brightness(1.25); }
+.utility { color:#b9b4ff; background:#30304b; }
+.operator { color:#c9c3ff; background:#333052; font-size:29px; }
+.equals { color:white; background:linear-gradient(145deg, var(--accent), var(--accent2)); font-size:30px; }
+.footnote { margin:18px 0 2px; text-align:center; color:#687286; font-size:11px; letter-spacing:1.5px; }
+@media (max-height: 700px) { .display { min-height:120px; } .key { height:58px; border-radius:16px; } .keypad { gap:8px; } }

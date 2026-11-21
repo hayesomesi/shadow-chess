@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#10131c">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">▦</span><span>CALCULATOR</span></div>
+      <span class="status">READY</span>
+    </header>
+
+    <section class="calculator" aria-label="Calculator">
+      <div class="display">
+        <div id="history" class="history" aria-live="polite"> </div>
+        <div id="screen" class="screen" aria-live="polite">0</div>
+      </div>
+      <div class="keypad">
+        <button class="key utility" data-action="clear">AC</button>
+        <button class="key utility" data-action="sign">+/−</button>
+        <button class="key utility" data-action="percent">%</button>
+        <button class="key operator" data-op="÷">÷</button>
+
+        <button class="key" data-number="7">7</button>
+        <button class="key" data-number="8">8</button>
+        <button class="key" data-number="9">9</button>
+        <button class="key operator" data-op="×">×</button>
+
+        <button class="key" data-number="4">4</button>
+        <button class="key" data-number="5">5</button>
+        <button class="key" data-number="6">6</button>
+        <button class="key operator" data-op="−">−</button>
+
+        <button class="key" data-number="1">1</button>
+        <button class="key" data-number="2">2</button>
+        <button class="key" data-number="3">3</button>
+        <button class="key operator" data-op="+">+</button>
+
+        <button class="key utility" data-action="delete" aria-label="Delete last digit">⌫</button>
+        <button class="key" data-number="0">0</button>
+        <button class="key" data-action="decimal">.</button>
+        <button class="key equals" data-action="equals">=</button>
+      </div>
+      <p class="footnote">Simple • Fast • Offline</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
